@@ -27,6 +27,7 @@ class PrimaryButton extends StatelessWidget {
             child: ElevatedButton(
               style: ButtonStyle(
                 padding: MaterialStateProperty.all(const EdgeInsets.fromLTRB(25, 15, 25, 15)),
+                backgroundColor: MaterialStateProperty.all(const Color(0xFFD70B57)),
               ),
               onPressed: onTap,
               child: Text(

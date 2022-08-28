@@ -61,6 +61,7 @@ class HomePage extends StatelessWidget {
       builder: (context, state) {
         return Scaffold(
           appBar: AppBar(
+            backgroundColor: const Color(0xFFD70B57),
             title: const Text("Spin Dice"),
             centerTitle: true,
             actions: [
