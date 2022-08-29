@@ -18,7 +18,7 @@ class HistoryPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    /// A card that displays a date and time alonng with the dice reults
+    /// A card that displays a date and time along with the dice reults
     Widget _buildCard(BuildContext context, DiceEntryModel diceModel) {
       return Card(
         child: Padding(
