@@ -60,7 +60,7 @@ class HistoryPage extends StatelessWidget {
 
     // Build bottom navigation button if there is items in the list
     Widget? _bottomNavigationBar(bool isListEmpty) {
-      if (isListEmpty) {
+      if (!isListEmpty) {
         return PrimaryButton(
           title: "Clear History",
           onTap: () => BlocProvider.of<HistoryCubit>(context).clearHistory(),
@@ -74,7 +74,7 @@ class HistoryPage extends StatelessWidget {
       builder: (context, state) {
         return Scaffold(
           appBar: PrimaryAppBar(title: "History"),
-          bottomNavigationBar: _bottomNavigationBar(state.historyList.isNotEmpty),
+          bottomNavigationBar: _bottomNavigationBar(state.historyList.isEmpty),
           body: _buildBody(state),
         );
       },
