@@ -10,7 +10,7 @@ You have the option of clearing the history.
 #### Step 1:
 Download or clone this repo by using the link below:
 ```bash
-git@github.com:Work90210/flutter-dice
+git@github.com:Work90210/dice-roll-flutter
 ```
 #### Step 2:
 Go to project root and execute the following command in console to get the required dependencies:
