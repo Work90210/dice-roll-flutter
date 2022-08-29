@@ -18,6 +18,7 @@ class HomeCubit extends Cubit<HomeState> {
   void rollTheDice() async {
     List<int> diceResults = [];
 
+    // Change state to loading
     emit(HomeState.loading(resultHistory: state.resultHistory));
 
     // Generate two dice results and add it to the diceReults list
@@ -28,12 +29,15 @@ class HomeCubit extends Cubit<HomeState> {
     // Delay the emit so the animcation can complete
     await Future.delayed(const Duration(seconds: 3, milliseconds: 400));
 
+    // Add new DiceEntryModel to the result history list
     resultHistory.add(
       DiceEntryModel(
         diceResults: diceResults,
         createdTime: DateTime.now(),
       ),
     );
+
+    // Change state to loaded
     emit(
       HomeState.loaded(
         diceResults: diceResults,
@@ -47,7 +51,7 @@ class HomeCubit extends Cubit<HomeState> {
     return Random().nextInt(5) + 1;
   }
 
-  /// Clear History
+  /// Clear History list and remove history in the state
   void clearHistory() {
     resultHistory.clear();
 

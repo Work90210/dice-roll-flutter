@@ -21,10 +21,12 @@ class HistoryCubit extends Cubit<HistoryState> {
     _init();
   }
 
+  // Update the list with the dice history
   void _init() {
     emit(state.copyWith(historyList: diceHistory));
   }
 
+  // Clear the list in the state and call a method in homeCubit to clear the history
   void clearHistory() {
     emit(const HistoryState.init(historyList: []));
 

@@ -6,6 +6,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:intl/intl.dart';
 
 class Utils {
+  /// A helper method used to return the correct svg image of the die witht the correct height
   static SvgPicture getDieImage(int dieNumber, double height) {
     switch (dieNumber) {
       case 1:
@@ -23,6 +24,7 @@ class Utils {
     }
   }
 
+  /// A helper method used to return a human readable date from a timeStamp
   static String getDateTime(DateTime time) {
     final hourMinute = DateFormat('HH:mm').format(time);
     final weekDay = DateFormat('dd MMMM').format(time);
